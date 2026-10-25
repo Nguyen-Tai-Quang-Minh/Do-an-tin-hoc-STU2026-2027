@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+                "name": "Run Library App",
+                "type": "cppvsdbg",
+                "request": "launch",
+                "program": "${workspaceRoot}/library_app.exe",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "console": "externalTerminal",
+                "preLaunchTask": "Build Library App"
+        }
+    ]
+}
