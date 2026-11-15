@@ -48,6 +48,7 @@ struct BSTNode
 struct HashNode{
     DocGia Data;
     HashNode* link;
+    HashNode(DocGia r) : Data(r), link(nullptr) {}
 };
 struct TransactionRecord{
     string TransactionID;
