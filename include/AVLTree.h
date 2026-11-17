@@ -24,6 +24,7 @@ public:
     void xuatNLR();
     AVLNode* getRoot() const { return root; }
     bool update(string& isbn, Sach& newInfo);
+    AVLNode* nodesearchreturns(string ISBN);
 };
 
 

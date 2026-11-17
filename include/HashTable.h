@@ -21,6 +21,8 @@ public:
     bool remove(string& cmnd);
     void printTable();
     HashNode* sua(string &CMND, HashNode* dg);
+    int getTableSize();
+    HashNode* getBucket(int index);
 };
 
 

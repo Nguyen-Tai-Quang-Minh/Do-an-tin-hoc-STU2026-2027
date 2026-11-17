@@ -99,7 +99,9 @@ void AVLTree::insert(Sach Sach) {
 bool AVLTree::search(string ISBN) {
     return searchNode(root, ISBN) != nullptr;
 }
-
+AVLNode* AVLTree::nodesearchreturns(string ISBN) {
+    return searchNode(root, ISBN);
+}
 
 
 // Tìm node có giá trị ISBN nhỏ nhất (dùng cho xóa node có 2 con)
@@ -171,7 +173,6 @@ bool AVLTree::xoa(string isbn) {
     root = deleteNode(root, isbn);
     return true;
 }
-
 // 3. CHỨC NĂNG SỬA THÔNG TIN SÁCH
 bool AVLTree::update(string& isbn, Sach& newInfo) {
     AVLNode* bookPtr = searchNode(root, isbn);
@@ -197,7 +198,12 @@ AVLNode* AVLTree::searchNode(AVLNode* node, string ISBN) {
 
 void AVLTree::NLR(AVLNode* node) {
     if (node) {
-        cout << "ISBN: " << node->Data.ISBN << " - Tên: " << node->Data.ten << endl;
+        cout << "ISBN: " << node->Data.ISBN << endl << 
+        " - Ten: " << node->Data.ten << endl <<
+        " - tac gia: " << node->Data.tacgia << endl <<
+        " - the loai: " << node->Data.theloai<< endl << 
+        " - namXB: " << node->Data.namXB << endl <<
+        " - so luong: " << node->Data.soluong << endl;
         NLR(node->left);
         NLR(node->right);
     }
